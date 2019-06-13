@@ -11,6 +11,7 @@ const { encodeNdjson } = require('../lib/util');
 // TODO Pull some of this out of the route config
 function formatSong(data, { STATIC_ROOT }) {
   return {
+    id: data.key,
     meta: data.value.meta,
     created: new Date(data.value.created),
     file: `${STATIC_ROOT}/songs/${data.key}`,
