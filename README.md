@@ -6,8 +6,8 @@ This is only meant to be an educational project for fun, but if you like anythin
 
 ## Features
 
-- Upload and categorise songs
-- Find and play songs
+- Upload songs: Try running `./upload.sh` in the repo
+- Find and play songs: Try running `curl localhost:3000/songs` (Can pass `limit=<int>` and `startAfter=<songId>`)
 
 ## Development
 
@@ -25,6 +25,8 @@ LevelDB gives us a portable database that is both fast and lightweight enough, b
 
 - Listing data can easily be limitted, but providing an offset is harder
 - Filtering requires clever key composition or filtering a stream over the values (fast enough up for medium sized datasets)
+
+Due to being able to easily operate on streams, and because incremental search can be a nice thing, listing songs are served as NDJSON.
 
 ## Todo
 
