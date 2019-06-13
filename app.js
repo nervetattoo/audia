@@ -3,7 +3,7 @@ const path = require('path');
 const logger = require('morgan');
 const config = require('./config');
 
-const createSongsRouter = require('./routes/songs');
+const createSongsRouter = require('./api/songs');
 
 const app = express();
 
